@@ -1,0 +1,28 @@
+@import "/scss/variables";
+
+.stepMenuItem {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid $white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-weight: 500;
+    color: $white;
+
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    &.active {
+        background-color: $light-blue;
+
+        border: none;
+
+        color: $marine-blue;
+    }
+}

@@ -1,0 +1,17 @@
+.stepMenu {
+    aspect-ratio: 2.2/1;
+    width: 100%;
+
+    list-style-type: none;
+
+    background-image: url("/imgs/bg-sidebar-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+
+    padding-top: 32px;
+}
