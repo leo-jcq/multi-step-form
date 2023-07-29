@@ -1,0 +1,45 @@
+@import "/scss/variables";
+
+.textInput {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & .label {
+        font-size: 0.7em;
+        font-weight: 500;
+        color: $marine-blue;
+
+        & .error {
+            float: right;
+
+            color: $strawberry-red;
+        }
+    }
+
+    & .input {
+        padding: 10px;
+
+        border: 1px solid $light-gray;
+        border-radius: 5px;
+
+        font-weight: 500;
+        color: $marine-blue;
+
+        &.error {
+            border-color: $strawberry-red;
+
+            &::placeholder {
+                color: $cool-gray;
+            }
+        }
+
+        &:active {
+            border-color: $purplish-blue;
+        }
+
+        &::placeholder {
+            color: $cool-gray;
+        }
+    }
+}

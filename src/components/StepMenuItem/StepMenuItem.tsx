@@ -4,13 +4,13 @@ import './StepMenuItem.scss';
 interface StepMenuItemProps {
     step: number;
     currentStep: number;
-    setCurrentStep: Dispatch<SetStateAction<number>>;
+    changeStep: (newStep: number) => void;
 }
 
-const StepMenuItem: FC<StepMenuItemProps> = ({ step, currentStep, setCurrentStep }) => (
+const StepMenuItem: FC<StepMenuItemProps> = ({ step, currentStep, changeStep }) => (
     <li
         className={`stepMenuItem${currentStep === step ? ' active' : ''}`}
-        onClick={() => setCurrentStep(step)}>
+        onClick={() => changeStep(step)}>
         {step}
     </li>
 );

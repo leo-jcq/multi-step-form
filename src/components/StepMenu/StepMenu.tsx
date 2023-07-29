@@ -1,19 +1,19 @@
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import MenuItem from '../StepMenuItem/StepMenuItem';
 import './StepMenu.scss';
 
 interface StepMenuProps {
     currentStep: number;
-    setCurrentStep: Dispatch<SetStateAction<number>>;
+    changeStep: (newStep: number) => void;
 }
 
-const StepMenu: FC<StepMenuProps> = ({ currentStep, setCurrentStep }) => {
+const StepMenu: FC<StepMenuProps> = ({ currentStep, changeStep }) => {
     return (
         <menu className="stepMenu">
-            <MenuItem step={1} currentStep={currentStep} setCurrentStep={setCurrentStep} />
-            <MenuItem step={2} currentStep={currentStep} setCurrentStep={setCurrentStep} />
-            <MenuItem step={3} currentStep={currentStep} setCurrentStep={setCurrentStep} />
-            <MenuItem step={4} currentStep={currentStep} setCurrentStep={setCurrentStep} />
+            <MenuItem step={1} currentStep={currentStep} changeStep={changeStep} />
+            <MenuItem step={2} currentStep={currentStep} changeStep={changeStep} />
+            <MenuItem step={3} currentStep={currentStep} changeStep={changeStep} />
+            <MenuItem step={4} currentStep={currentStep} changeStep={changeStep} />
         </menu>
     );
 };

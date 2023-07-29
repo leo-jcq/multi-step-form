@@ -1,17 +1,15 @@
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import './ControlBar.scss';
 
 interface ControlBarProps {
     currentStep: number;
-    setCurrentStep: Dispatch<SetStateAction<number>>;
+    changeStep: (newStep: number) => void;
 }
 
-const ControlBar: FC<ControlBarProps> = ({ currentStep, setCurrentStep }) => {
-    const handlePrevStep = () => {
-        setCurrentStep((prevCurrentStep) => prevCurrentStep - 1);
-    };
+const ControlBar: FC<ControlBarProps> = ({ currentStep, changeStep }) => {
+    const handlePrevStep = () => changeStep(currentStep - 1);
 
-    const handleNextStep = () => setCurrentStep((prevCurrentStep) => prevCurrentStep + 1);
+    const handleNextStep = () => changeStep(currentStep + 1);
 
     return (
         <div className="controlBar">
