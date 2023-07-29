@@ -36,6 +36,12 @@
 
     & .next {
         background-color: $marine-blue;
+
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.9;
+        }
     }
 
     & .confirm {
