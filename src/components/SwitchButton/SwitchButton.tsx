@@ -12,7 +12,9 @@ const SwitchButton: FC = () => {
     const setBilling = useBillingUpdate();
     const toggleBilling = useBillingToggle();
 
-    const circleStyle: CSSProperties = { transform: `translateX(${billing === 'monthly' ? '0' : '100'}%)` };
+    const circleStyle: CSSProperties = {
+        transform: `translateX(${billing === 'monthly' ? '0' : '100'}%)`
+    };
 
     return (
         <div className="switchButton">

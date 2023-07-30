@@ -19,7 +19,7 @@ const TextInput: FC<TextInputProps> = ({ type, placeholder, name, value, setValu
             <label className="label" id={name.replace(' ', '_')}>
                 {name}
 
-                {value.error && <span className='error'>This fiels is required</span>}
+                {value.error && <span className="error">This fiels is required</span>}
             </label>
             <input
                 className={`input${value.error ? ' error' : ''}`}

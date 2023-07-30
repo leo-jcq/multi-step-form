@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import './StepMenuItem.scss';
 
 interface StepMenuItemProps {

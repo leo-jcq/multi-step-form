@@ -2,8 +2,8 @@ import { Dispatch, FC, SetStateAction } from 'react';
 import plans from '../../constants/plans';
 import PlanOption from '../PlanOption/PlanOption';
 import Step from '../Step/Step';
-import './Step2.scss';
 import SwitchButton from '../SwitchButton/SwitchButton';
+import './Step2.scss';
 
 interface Step2Props {
     plan: planType;

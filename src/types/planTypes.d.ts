@@ -3,6 +3,6 @@ interface planType {
     prices: {
         monthly: number;
         yearly: number;
-    },
+    };
     image: string;
 }
