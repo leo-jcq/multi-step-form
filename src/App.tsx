@@ -9,12 +9,14 @@ import { mailRegex, telRegex } from './constants/regexs';
 const App: FC = () => {
     // States
     const [currentStep, setCurrentStep] = useState(1);
-    //Step 1
+    // Step 1
     const [name, setName] = useState<inputType>({ value: '', error: false });
     const [email, setEmail] = useState<inputType>({ value: '', error: false });
     const [tel, setTel] = useState<inputType>({ value: '', error: false });
-    //Step 2
+    // Step 2
     const [plan, setPlan] = useState(plans[0]);
+    // Step 3
+    const [addOns, setAddOns] = useState<addOnType[]>([]);
 
     const changeStep = (newStep: number) => {
         let fixingStep: number | null = null;
@@ -52,6 +54,8 @@ const App: FC = () => {
                 setTel={setTel}
                 plan={plan}
                 setPlan={setPlan}
+                addOns={addOns}
+                setAddOns={setAddOns}
             />
             <ControlBar currentStep={currentStep} changeStep={changeStep} />
         </div>

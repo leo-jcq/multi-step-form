@@ -1,0 +1,73 @@
+@import "/scss/_variables";
+
+.addOnOption {
+    padding: 16px;
+
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+
+    & .left {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    & .mark {
+        width: 18px;
+        height: 18px;
+
+        border: 1px solid $light-gray;
+        border-radius: 3px;
+
+        background-color: transparent;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .image {
+            display: none;
+        }
+    }
+
+    & .infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    & .name {
+        font-size: 0.9em;
+        font-weight: 500;
+        color: $marine-blue;
+    }
+
+    & .description {
+        font-size: 0.8em;
+        color: $cool-gray;
+    }
+
+    & .price {
+        font-size: 0.8em;
+        color: $purplish-blue;
+    }
+
+    &.selected {
+        border-color: $purplish-blue;
+
+        & .mark {
+            border-color: $purplish-blue;
+
+            background-color: $purplish-blue;
+
+            & .image {
+                display: block;
+            }
+        }
+    }
+}
