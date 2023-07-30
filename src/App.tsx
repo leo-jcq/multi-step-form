@@ -3,14 +3,17 @@ import './App.scss';
 import ControlBar from './components/ControlBar/ControlBar';
 import StepMenu from './components/StepMenu/StepMenu';
 import Steps from './components/Steps/Steps';
-import { mailRegex, telRegex } from './constants/regexs';
+import plans from './constants/plans';
 
 const App: FC = () => {
     // States
     const [currentStep, setCurrentStep] = useState(1);
+    //Step 1
     const [name, setName] = useState<inputType>({ value: '', error: false });
     const [email, setEmail] = useState<inputType>({ value: '', error: false });
     const [tel, setTel] = useState<inputType>({ value: '', error: false });
+    //Step 2
+    const [plan, setPlan] = useState(plans[0]);
 
     const changeStep = (newStep: number) => {
         let fixingStep: number | null = null;
@@ -36,19 +39,21 @@ const App: FC = () => {
     };
 
     return (
-        <div className="app">
-            <StepMenu currentStep={currentStep} changeStep={changeStep} />
-            <Steps
-                currentStep={currentStep}
-                name={name}
-                setName={setName}
-                email={email}
-                setEmail={setEmail}
-                tel={tel}
-                setTel={setTel}
-            />
-            <ControlBar currentStep={currentStep} changeStep={changeStep} />
-        </div>
+            <div className="app">
+                <StepMenu currentStep={currentStep} changeStep={changeStep} />
+                <Steps
+                    currentStep={currentStep}
+                    name={name}
+                    setName={setName}
+                    email={email}
+                    setEmail={setEmail}
+                    tel={tel}
+                    setTel={setTel}
+                    plan={plan}
+                    setPlan={setPlan}
+                />
+                <ControlBar currentStep={currentStep} changeStep={changeStep} />
+            </div>
     );
 };
 

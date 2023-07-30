@@ -1,0 +1,39 @@
+@import "/scss/variables";
+
+.planOption {
+    padding: 16px;
+
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    cursor: pointer;
+
+    &.selected {
+        border-color: $purplish-blue;
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    & .name {
+        font-weight: 5000;
+        color: $marine-blue;
+    }
+
+    & .price {
+        font-size: .8em;
+        color: $cool-gray;
+    }
+
+    & .free {
+        font-size: 0.8em;
+        color: $marine-blue;
+    }
+}

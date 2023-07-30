@@ -4,6 +4,10 @@
 
     list-style-type: none;
 
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
     background-image: url("/imgs/bg-sidebar-mobile.svg");
     background-position: center;
     background-repeat: no-repeat;

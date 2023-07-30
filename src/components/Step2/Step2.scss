@@ -1,0 +1,13 @@
+.step2 {
+    & .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    & .plan {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
