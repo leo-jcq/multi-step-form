@@ -19,6 +19,7 @@ const Step2: FC<Step2Props> = ({ plan, setPlan }) => {
             <div className="plan">
                 {plans.map((planMap) => (
                     <PlanOption
+                        key={planMap.name}
                         plan={planMap}
                         selected={planMap.name === plan.name}
                         setPlan={setPlan}

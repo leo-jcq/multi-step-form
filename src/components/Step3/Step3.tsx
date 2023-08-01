@@ -5,8 +5,8 @@ import Step from '../Step/Step';
 import './Step3.scss';
 
 interface Step3Props {
-    addOns: addOnType[];
-    setAddOns: Dispatch<SetStateAction<addOnType[]>>;
+    addOns: addOn[];
+    setAddOns: Dispatch<SetStateAction<addOn[]>>;
 }
 
 const Step3: FC<Step3Props> = ({ addOns, setAddOns }) => {
@@ -17,6 +17,7 @@ const Step3: FC<Step3Props> = ({ addOns, setAddOns }) => {
             description="Add-ons help enhance your gaming experience">
             {addOnsList.map((addOn) => (
                 <AddOnOption
+                    key={addOn.name}
                     addOn={addOn}
                     selected={addOns.includes(addOn)}
                     setAddOns={setAddOns}

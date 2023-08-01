@@ -1,4 +1,4 @@
-const addOnsList: addOnType[] = [
+const addOnsList: addOn[] = [
     {
         name: 'Online service',
         description: 'Access to multiplayer games',

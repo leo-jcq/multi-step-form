@@ -1,4 +1,4 @@
-interface addOnType {
+interface addOn {
     name: string;
     description: string;
     prices: {

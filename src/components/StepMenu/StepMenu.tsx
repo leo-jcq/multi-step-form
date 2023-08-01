@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import MenuItem from '../StepMenuItem/StepMenuItem';
+import StepMenuItem from '../StepMenuItem/StepMenuItem';
 import './StepMenu.scss';
 
 interface StepMenuProps {
@@ -10,10 +10,10 @@ interface StepMenuProps {
 const StepMenu: FC<StepMenuProps> = ({ currentStep, changeStep }) => {
     return (
         <menu className="stepMenu">
-            <MenuItem step={1} currentStep={currentStep} changeStep={changeStep} />
-            <MenuItem step={2} currentStep={currentStep} changeStep={changeStep} />
-            <MenuItem step={3} currentStep={currentStep} changeStep={changeStep} />
-            <MenuItem step={4} currentStep={currentStep} changeStep={changeStep} />
+            <StepMenuItem step={1} currentStep={currentStep} changeStep={changeStep} />
+            <StepMenuItem step={2} currentStep={currentStep} changeStep={changeStep} />
+            <StepMenuItem step={3} currentStep={currentStep} changeStep={changeStep} />
+            <StepMenuItem step={4} currentStep={currentStep === 5 ? 4 : currentStep} changeStep={changeStep} />
         </menu>
     );
 };
