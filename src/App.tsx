@@ -16,29 +16,33 @@ const App: FC = () => {
     // Step 2
     const [plan, setPlan] = useState(plans[0]);
     // Step 3
-    const [addOns, setAddOns] = useState<addOnType[]>([]);
+    const [addOns, setAddOns] = useState<addOn[]>([]);
 
     const changeStep = (newStep: number) => {
-        let fixingStep: number | null = null;
+        if (currentStep < 5) {
+            let fixingStep: number | null = null;
 
-        // Step 1 verifications
-        // Name verifications
-        if (name.value == null || name.value === '') {
-            setName((prevName) => ({ ...prevName, error: true }));
-            fixingStep = 1;
-        }
-        // Email verifications
-        if (email.value == null || !email.value.match(mailRegex)) {
-            setEmail((prevEmail) => ({ ...prevEmail, error: true }));
-            fixingStep = 1;
-        }
-        // Tel verifications
-        if (tel.value == null || !tel.value.match(telRegex)) {
-            setTel((prevTel) => ({ ...prevTel, error: true }));
-            fixingStep = 1;
-        }
+            // Step 1 verifications
+            if (currentStep === 1) {
+                // Name verifications
+                if (name.value == null || name.value === '') {
+                    setName((prevName) => ({ ...prevName, error: true }));
+                    fixingStep = 1;
+                }
+                // Email verifications
+                if (email.value == null || !email.value.match(mailRegex)) {
+                    setEmail((prevEmail) => ({ ...prevEmail, error: true }));
+                    fixingStep = 1;
+                }
+                // Tel verifications
+                if (tel.value == null || !tel.value.match(telRegex)) {
+                    setTel((prevTel) => ({ ...prevTel, error: true }));
+                    fixingStep = 1;
+                }
+            }
 
-        setCurrentStep(fixingStep === null ? newStep : fixingStep);
+            setCurrentStep(fixingStep === null ? newStep : fixingStep);
+        }
     };
 
     return (
@@ -46,6 +50,7 @@ const App: FC = () => {
             <StepMenu currentStep={currentStep} changeStep={changeStep} />
             <Steps
                 currentStep={currentStep}
+                setCurrentStep={setCurrentStep}
                 name={name}
                 setName={setName}
                 email={email}
@@ -57,7 +62,7 @@ const App: FC = () => {
                 addOns={addOns}
                 setAddOns={setAddOns}
             />
-            <ControlBar currentStep={currentStep} changeStep={changeStep} />
+            {currentStep < 5 && <ControlBar currentStep={currentStep} changeStep={changeStep} />}
         </div>
     );
 };

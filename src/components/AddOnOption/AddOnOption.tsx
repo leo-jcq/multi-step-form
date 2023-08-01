@@ -4,9 +4,9 @@ import { BILLING, useBilling } from '../../contexts/BillingContext';
 import './AddOnOption.scss';
 
 interface AddOnOptionProps {
-    addOn: addOnType;
+    addOn: addOn;
     selected: boolean;
-    setAddOns: Dispatch<SetStateAction<addOnType[]>>;
+    setAddOns: Dispatch<SetStateAction<addOn[]>>;
 }
 
 const AddOnOption: FC<AddOnOptionProps> = ({ addOn, selected, setAddOns }) => {

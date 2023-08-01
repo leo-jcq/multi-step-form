@@ -1,0 +1,29 @@
+@import "/scss/variables";
+
+.step5 {
+    padding: 55px 16px;
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & .image {
+        width: 45px;
+        height: 45px;
+
+        margin-bottom: 16px;
+    }
+
+    & .title {
+        color: $marine-blue;
+    }
+
+    & .text {
+        font-size: 0.9em;
+        line-height: 1.6em;
+        text-align: center;
+        color: $cool-gray;
+    }
+}

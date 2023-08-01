@@ -10,4 +10,7 @@
     border-radius: 10px;
 
     box-shadow: 0 10px 15px rgba($color: $pastel-blue, $alpha: 20%);
+
+    position: relative;
+    z-index: 10;
 }

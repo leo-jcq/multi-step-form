@@ -1,0 +1,80 @@
+@import "/scss/variables";
+
+.step4 {
+    & .content {
+        padding: 0 12px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    & .elements {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    & .element {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .name {
+            font-size: 0.9em;
+            color: $cool-gray;
+        }
+
+        & .price {
+            font-size: 0.9em;
+            color: $marine-blue;
+        }
+    }
+
+    & .plan {
+        & .name {
+            display: block;
+
+            font-weight: 500;
+            color: $marine-blue;
+        }
+
+        & .change {
+            background-color: transparent;
+
+            border: none;
+
+            font-size: 0.9em;
+            text-decoration: underline;
+            color: $cool-gray;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        & .price {
+            font-weight: 700;
+        }
+    }
+
+    & .separator {
+        height: 1px;
+
+        background-color: $light-gray;
+
+        border: none;
+    }
+
+    & .total {
+        & .name,
+        & .price {
+            font-size: 1em;
+        }
+
+        & .price {
+            font-weight: 700;
+            color: $purplish-blue;
+        }
+    }
+}

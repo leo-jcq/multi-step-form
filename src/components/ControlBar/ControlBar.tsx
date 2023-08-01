@@ -11,6 +11,8 @@ const ControlBar: FC<ControlBarProps> = ({ currentStep, changeStep }) => {
 
     const handleNextStep = () => changeStep(currentStep + 1);
 
+    const handleConfirm = () => changeStep(5);
+
     return (
         <div className="controlBar">
             {currentStep > 1 && (
@@ -23,7 +25,11 @@ const ControlBar: FC<ControlBarProps> = ({ currentStep, changeStep }) => {
                     Next Step
                 </button>
             )}
-            {currentStep === 4 && <button className="confirm">Confirm</button>}
+            {currentStep === 4 && (
+                <button className="confirm" onClick={handleConfirm}>
+                    Confirm
+                </button>
+            )}
         </div>
     );
 };
