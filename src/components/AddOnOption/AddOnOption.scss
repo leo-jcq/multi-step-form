@@ -11,6 +11,14 @@
     justify-content: space-between;
     align-items: center;
 
+    transition: border-color 0.2s ease;
+
+    cursor: pointer;
+
+    &:hover {
+        border-color: $purplish-blue;
+    }
+
     & .left {
         display: flex;
         gap: 16px;
@@ -71,3 +79,10 @@
         }
     }
 }
+
+@media screen and (min-width: $desktop-width) {
+    .addOnOption {
+        padding: 18px 22px;
+    }
+}
+

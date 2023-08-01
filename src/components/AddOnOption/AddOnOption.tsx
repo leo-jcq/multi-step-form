@@ -14,10 +14,12 @@ const AddOnOption: FC<AddOnOptionProps> = ({ addOn, selected, setAddOns }) => {
 
     const handleClick = () => {
         if (selected) {
+            // remove of the list
             setAddOns((prevAddOns) =>
                 prevAddOns.filter((currentAddOn) => currentAddOn.name !== addOn.name)
             );
         } else {
+            // add on the list
             setAddOns((prevAddOns) => [...prevAddOns, addOn]);
         }
     };

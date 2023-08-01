@@ -12,6 +12,10 @@
         font-weight: 500;
         color: $light-gray;
 
+        cursor: pointer;
+
+        transition: color 0.2s ease;
+
         &.active {
             color: $marine-blue;
         }
@@ -27,6 +31,8 @@
         border-radius: 22px;
 
         position: relative;
+
+        cursor: pointer;
 
         & .circle {
             width: 16px;

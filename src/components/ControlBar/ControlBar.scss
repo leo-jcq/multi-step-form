@@ -25,6 +25,12 @@
         background-color: transparent;
 
         color: $cool-gray;
+
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $marine-blue;
+        }
     }
 
     & .next,
@@ -37,19 +43,38 @@
         border-radius: 5px;
 
         float: right;
-    }
-
-    & .next {
-        background-color: $marine-blue;
 
         transition: opacity 0.3s ease;
 
         &:hover {
-            opacity: 0.9;
+            opacity: 0.8;
         }
+    }
+
+    & .next {
+        background-color: $marine-blue;
     }
 
     & .confirm {
         background-color: $purplish-blue;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .controlBar {
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+        & button {
+            font-size: 17px;
+        }
+
+        & .next,
+        & .confirm {
+            width: 120px;
+            height: 50px;
+
+            border-radius: 10px;
+        }
     }
 }

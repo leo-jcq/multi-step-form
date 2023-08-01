@@ -48,8 +48,12 @@
             text-decoration: underline;
             color: $cool-gray;
 
+            cursor: pointer;
+
+            transition: color 0.2s ease;
+
             &:hover {
-                text-decoration: none;
+                color: $purplish-blue;
             }
         }
 
@@ -75,6 +79,16 @@
         & .price {
             font-weight: 700;
             color: $purplish-blue;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .step4 {
+        & .plan {
+            & .name {
+                margin-bottom: 10px;
+            }
         }
     }
 }

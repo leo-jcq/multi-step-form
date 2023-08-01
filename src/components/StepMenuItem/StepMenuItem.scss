@@ -1,28 +1,62 @@
 @import "/scss/variables";
 
 .stepMenuItem {
-    width: 32px;
-    height: 32px;
+    & .btn {
+        width: 32px;
+        height: 32px;
 
-    border: 1px solid $white;
-    border-radius: 50%;
+        border: 1px solid $white;
+        border-radius: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    cursor: pointer;
+        cursor: pointer;
 
-    font-weight: 500;
-    color: $white;
+        background-color: transparent;
 
-    transition: color 0.3s ease, background-color 0.3s ease;
+        font-weight: 500;
+        color: $white;
 
-    &.active {
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    & .text {
+        display: none;
+    }
+
+    &.active .btn {
         background-color: $light-blue;
 
         border: none;
 
         color: $marine-blue;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .stepMenuItem {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+
+        & .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            text-transform: uppercase;
+            
+            & .number {
+                font-size: 0.8em;
+                color: $cool-gray;
+            }
+
+            & .name {
+                font-weight: 500;
+                color: $white;
+            }
+        }
     }
 }

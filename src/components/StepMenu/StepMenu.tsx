@@ -10,10 +10,10 @@ interface StepMenuProps {
 const StepMenu: FC<StepMenuProps> = ({ currentStep, changeStep }) => {
     return (
         <menu className="stepMenu">
-            <StepMenuItem step={1} currentStep={currentStep} changeStep={changeStep} />
-            <StepMenuItem step={2} currentStep={currentStep} changeStep={changeStep} />
-            <StepMenuItem step={3} currentStep={currentStep} changeStep={changeStep} />
-            <StepMenuItem step={4} currentStep={currentStep === 5 ? 4 : currentStep} changeStep={changeStep} />
+            <StepMenuItem step={1} name='Your info' currentStep={currentStep} changeStep={changeStep} />
+            <StepMenuItem step={2} name='Select plan' currentStep={currentStep} changeStep={changeStep} />
+            <StepMenuItem step={3} name='Add-ons' currentStep={currentStep} changeStep={changeStep} />
+            <StepMenuItem step={4} name='Summary' currentStep={currentStep === 5 ? 4 : currentStep} changeStep={changeStep} />
         </menu>
     );
 };

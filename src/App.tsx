@@ -41,28 +41,32 @@ const App: FC = () => {
                 }
             }
 
-            setCurrentStep(fixingStep === null ? newStep : fixingStep);
+            setCurrentStep(fixingStep === null ?  newStep : fixingStep);
         }
     };
 
     return (
         <div className="app">
-            <StepMenu currentStep={currentStep} changeStep={changeStep} />
-            <Steps
-                currentStep={currentStep}
-                setCurrentStep={setCurrentStep}
-                name={name}
-                setName={setName}
-                email={email}
-                setEmail={setEmail}
-                tel={tel}
-                setTel={setTel}
-                plan={plan}
-                setPlan={setPlan}
-                addOns={addOns}
-                setAddOns={setAddOns}
-            />
-            {currentStep < 5 && <ControlBar currentStep={currentStep} changeStep={changeStep} />}
+            <div className="container">
+                <StepMenu currentStep={currentStep} changeStep={changeStep} />
+                <Steps
+                    currentStep={currentStep}
+                    setCurrentStep={setCurrentStep}
+                    name={name}
+                    setName={setName}
+                    email={email}
+                    setEmail={setEmail}
+                    tel={tel}
+                    setTel={setTel}
+                    plan={plan}
+                    setPlan={setPlan}
+                    addOns={addOns}
+                    setAddOns={setAddOns}
+                />
+                {currentStep < 5 && (
+                    <ControlBar currentStep={currentStep} changeStep={changeStep} />
+                )}
+            </div>
         </div>
     );
 };

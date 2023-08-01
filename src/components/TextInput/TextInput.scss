@@ -7,12 +7,13 @@
 
     & .label {
         font-size: 0.7em;
-        font-weight: 500;
+        font-weight: 400;
         color: $marine-blue;
 
         & .error {
             float: right;
 
+            font-weight: 500;
             color: $strawberry-red;
         }
     }
@@ -40,6 +41,22 @@
 
         &::placeholder {
             color: $cool-gray;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .textInput {
+        gap: 10px;
+
+        & .label {
+            font-size: 0.8em;
+        }
+
+        & .input {
+            padding: 16px;
+
+            border-radius: 10px;
         }
     }
 }

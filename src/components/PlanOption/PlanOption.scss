@@ -12,7 +12,10 @@
 
     cursor: pointer;
 
-    &.selected {
+    transition: border-color 0.2s ease;
+
+    &.selected,
+    &:hover {
         border-color: $purplish-blue;
     }
 
@@ -35,5 +38,16 @@
     & .free {
         font-size: 0.8em;
         color: $marine-blue;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .planOption {
+        width: 135px;
+
+        flex-direction: column;
+        gap: 45px;
+
+        padding: 18px 16px 16px 16px;
     }
 }

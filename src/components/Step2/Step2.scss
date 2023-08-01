@@ -1,3 +1,5 @@
+@import "/scss/variables";
+
 .step2 {
     & .content {
         display: flex;
@@ -9,5 +11,18 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    .step2 {
+        & .content {
+            gap: 30px;
+        }
+
+        & .plan {
+            flex-direction: row;
+            gap: 18px;
+        }
     }
 }
