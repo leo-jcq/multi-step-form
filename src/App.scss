@@ -1,12 +1,11 @@
 @import "/scss/variables";
 
 .app {
-    min-height: 100vh;
-    height: 100%;
-
     background-color: $magnolia;
 
     & > .container {
+        height: 100vh;
+
         display: flex;
         flex-direction: column;
         gap: 25px;
